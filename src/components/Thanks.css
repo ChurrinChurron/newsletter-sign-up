@@ -1,0 +1,97 @@
+.modal {
+
+    min-height: 100vh;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    font-family: 'Roboto', sans-serif;
+    padding: 2em 1.5em;
+    background: var(--white);
+    z-index: -1;
+}
+
+.modal.success {
+
+    z-index: 2;
+}
+
+.modal div {
+
+    max-width: 35em;
+    margin: 8em auto 0 auto;
+}
+
+.modal h2 {
+
+    margin: .6em 0;
+    font-size: 2.5em;
+}
+
+.modal p {
+
+   width: 95%; 
+    line-height: 1.6em;
+}
+
+.modal button {
+
+    position: absolute;
+    width: 90%;
+    max-width: 36em;
+    bottom: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.2em 1em;
+    font-weight: 700;
+    border-radius: .6em;
+    border: none;
+    font-size: 1em;
+    background: var(--dark-slate-grey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.modal button:hover {
+
+    background: rgb(255,98,87);
+    background: linear-gradient(90deg, rgba(255,98,87,1) 53%, rgba(255,154,87,1) 100%);
+    box-shadow: 0 6px 8px 4px rgba(255,98,87,.3);
+}
+
+
+@media screen and (width >= 992px) {
+  
+    .modal {
+  
+      display: grid;
+      place-items: center;
+      background-color: var(--charcoal-grey);
+    }
+
+    .modal div {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 30em;
+        margin: 0;
+        border-radius: 2em;
+        padding: 2.5em;
+        background: var(--white);
+    }
+
+    .modal button {
+
+        position: relative;
+        width: 100%;
+        max-width: none;
+        bottom: 0;
+        left: 0;
+        transform: translateX(0);
+        margin-top: 2.6em;
+    }
+    
+  }

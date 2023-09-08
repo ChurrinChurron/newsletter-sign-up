@@ -1,0 +1,133 @@
+.sign {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+}
+
+.sign__content {
+
+    order: 2;
+    padding: 2em;
+}
+
+.sign__content h2 {
+
+    font-size: 2.5em;
+}
+
+.sign__content p {
+
+    margin: 1.2em 0;
+    line-height: 1.5em;
+}
+
+.sign__content ul {
+
+    list-style: none;
+}
+
+.sign__content ul li {
+
+    display: flex;
+    align-items: flex-start;
+    margin: 1.3em 0;
+    line-height: 1.6em;
+}
+
+.sign__content ul li::before {
+
+    content: url(assets/icon-list.svg);
+    margin-right: .9em;
+}
+
+.form__text {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.2em;
+}
+
+.form__text label {
+
+    font-size: .8em;
+    font-weight: 700;
+}
+
+.form__text span {
+
+    display: none;
+    color: var(--tomato);
+    font-weight: 700;
+    font-size: .8em;
+}
+
+.form__text span.error {
+
+    display: block;
+}
+
+form input {
+
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--grey);
+    outline-color: var(--grey);
+    border-radius: .5em;
+    font-family: 'Roboto', sans-serif;
+    margin: .780em 0;
+    font-size: 1em;
+}
+
+input[type=email].error {
+
+    outline-color: var(--tomato);
+    border: 1px solid var(--tomato);
+    color: var(--tomato);
+    background: var(--tomato-op);
+}
+
+input[type=submit] {
+
+    font-weight: 700;
+    background: var(--dark-slate-grey);
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+}
+
+input[type=submit]:hover {
+
+    background: rgb(255,98,87);
+    background: linear-gradient(90deg, rgba(255,98,87,1) 53%, rgba(255,154,87,1) 100%);
+    box-shadow: 0 6px 8px 4px rgba(255,98,87,.3);
+}
+
+@media screen and (width >= 992px) {
+    
+    .sign {
+
+        flex-direction: row;
+        padding: 1.4em;
+        border-radius: 2.4em;
+    }
+
+    .sign__content {
+
+        order: 0;
+        padding: 1em 4em 1em 1em;
+        width: 28em;
+    }
+
+    .sign__content h2 {
+
+        font-size: 3.2em;
+    }
+
+    .sign__content ul li {
+
+        margin: .5em 0;
+    }
+}
